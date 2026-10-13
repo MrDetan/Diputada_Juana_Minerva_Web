@@ -2406,63 +2406,585 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+    /* General Mobile Layout */
+    :root {
+        --header-height: 64px;
+    }
+    .container {
+        padding: 0 16px;
+    }
+    .section {
+        padding: 48px 0;
+    }
+    .section-title {
+        font-size: 1.7rem;
+        line-height: 1.25;
+    }
+    .section-desc {
+        font-size: 0.9rem;
+    }
+
+    /* Top Institutional Bar */
+    .top-institutional-bar {
+        padding: 5px 0;
+        font-size: 0.75rem;
+    }
+    .top-bar-content {
+        justify-content: space-between;
+        gap: 8px;
+    }
+    .top-bar-left {
+        gap: 8px;
+    }
+    .top-bar-left .divider,
+    .top-bar-left .inst-tag:not(:first-child) {
+        display: none;
+    }
+    .social-top-links {
+        display: none;
+    }
+    .accessibility-controls {
+        gap: 4px;
+    }
+    .acc-btn {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+    }
+    .top-live-btn {
+        font-size: 0.7rem;
+        padding: 2px 8px;
+    }
+
+    /* Header & Navigation */
     .desktop-nav {
         display: none;
     }
     .mobile-menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 7px 11px;
+        font-size: 1.15rem;
+    }
+    .header-container {
+        height: var(--header-height);
+    }
+    .brand-identity {
+        gap: 8px;
+    }
+    .morena-wine-badge {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+    .brand-name {
+        font-size: 1.05rem;
+    }
+    .brand-subtitle {
+        font-size: 0.7rem;
+    }
+    .header-actions {
+        gap: 6px;
+    }
+    .btn-live-pill {
+        padding: 5px 9px;
+        font-size: 0.75rem;
+    }
+    .header-actions .btn-gold {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+        width: 85vw;
+        max-width: 320px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 36px 0 50px;
     }
     .hero-headline {
-        font-size: 2.2rem;
+        font-size: 1.85rem !important;
+        line-height: 1.2;
+        letter-spacing: -0.3px;
+        margin-bottom: 16px;
     }
+    .hero-sublead {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        margin-bottom: 24px;
+    }
+    .badge-row {
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    .pill-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    .hero-cta-group {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    .hero-cta-group .btn {
+        width: 100%;
+    }
+    .portrait-card-wrapper {
+        max-width: 290px;
+        margin: 0 auto;
+    }
+    .portrait-info-floating {
+        bottom: -14px;
+        width: 95%;
+        padding: 8px 12px;
+    }
+    .floating-data strong {
+        font-size: 0.85rem;
+    }
+    .floating-data span {
+        font-size: 0.72rem;
+    }
+    .decorative-ribbon {
+        display: none;
+    }
+    .hero-quick-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px;
+        padding-top: 24px;
+    }
+    .stat-number {
+        font-size: 1.65rem;
+    }
+    .stat-label {
+        font-size: 0.78rem;
+    }
+
+    /* Semblanza & Bio */
+    .experience-card-photo {
+        max-width: 320px;
+        margin: 0 auto 30px;
+    }
+    .quote-card {
+        bottom: -15px;
+        left: 4%;
+        right: 4%;
+        padding: 12px 16px;
+    }
+    .quote-card p {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    .quote-card strong {
+        font-size: 0.8rem;
+    }
+    .principles-row {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+        margin-top: 36px;
+    }
+    .principle-card {
+        padding: 20px 18px;
+    }
+    .bio-timeline {
+        padding-left: 18px;
+    }
+    .timeline-content {
+        padding-left: 14px;
+    }
+    .timeline-content h4 {
+        font-size: 0.95rem;
+    }
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Initiatives Section */
     .initiatives-filter-bar {
         flex-direction: column;
         align-items: stretch;
+        gap: 14px;
+    }
+    .filter-pills {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 6px;
+        width: 100%;
+    }
+    .filter-pills::-webkit-scrollbar {
+        display: none;
+    }
+    .filter-btn {
+        padding: 7px 14px;
+        font-size: 0.8125rem;
+        flex-shrink: 0;
+    }
+    .search-box {
+        width: 100%;
     }
     .initiatives-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
-    .ig-posts-grid,
-    .news-cards-grid,
-    .transparencia-table-grid {
-        grid-template-columns: 1fr;
+    .initiative-card {
+        padding: 20px 18px;
     }
-    .agenda-event-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
+    .initiative-title {
+        font-size: 1.15rem;
+    }
+    .initiative-summary {
+        font-size: 0.875rem;
     }
     .gaceta-cta-banner {
         flex-direction: column;
         text-align: center;
-        padding: 24px;
+        padding: 20px 16px;
+        gap: 14px;
     }
-    .citizen-form .form-row {
+    .gaceta-cta-banner .btn {
+        width: 100%;
+    }
+
+    /* Comisiones */
+    .comisiones-cards-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-    .footer-top-grid {
-        grid-template-columns: 1fr;
+    .comision-card {
+        padding: 28px 20px 20px;
     }
-    .bottom-flex {
+
+    /* Agenda */
+    .agenda-tabs-header {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 6px;
+    }
+    .agenda-tabs-header::-webkit-scrollbar {
+        display: none;
+    }
+    .agenda-tab {
+        flex-shrink: 0;
+        padding: 9px 14px;
+        font-size: 0.8125rem;
+    }
+    .agenda-event-item {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px 16px;
+    }
+    .event-date-badge {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        width: auto;
+    }
+    .event-title {
+        font-size: 1.05rem;
+    }
+    .event-desc {
+        font-size: 0.875rem;
+    }
+
+    /* Sindicaturas Explorer (Territorio) */
+    .sindicaturas-nav-bar {
+        padding: 14px 16px;
+    }
+    .sindicaturas-pills-list {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 6px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .sindicaturas-pills-list::-webkit-scrollbar {
+        display: none;
+    }
+    .sindicatura-pill {
+        flex-shrink: 0;
+        padding: 7px 12px;
+        font-size: 0.8125rem;
     }
     .territorio-display-grid {
         grid-template-columns: 1fr;
+        padding: 20px 16px;
+        gap: 24px;
+    }
+    .sind-title {
+        font-size: 1.35rem;
+    }
+    .sind-description {
+        font-size: 0.875rem;
+    }
+    .sind-achievements-box {
+        padding: 14px 16px;
+    }
+    .sind-achievements-list li {
+        font-size: 0.8125rem;
+    }
+    .sind-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .sind-cta-row .btn {
+        width: 100%;
+    }
+    .sind-people-count {
+        text-align: center;
+    }
+    .ahome-district-svg {
+        max-height: 220px;
+    }
+    .territorio-stats-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .modulo-contact-card {
+        padding: 20px 16px;
+    }
+    .modulo-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .modulo-actions .btn {
+        width: 100%;
+    }
+
+    /* Prensa & Instagram */
+    .ig-profile-header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 14px;
+    }
+    .ig-username-row {
+        justify-content: center;
+    }
+    .ig-posts-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
     .press-mediakit-bar {
         flex-direction: column;
         text-align: center;
+        padding: 18px 16px;
+        gap: 14px;
     }
     .mediakit-info {
         flex-direction: column;
+        text-align: center;
+    }
+    .press-mediakit-bar .btn {
+        width: 100%;
+    }
+    .news-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .btn-copy-news {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Buzón Ciudadano & Tracker */
+    .buzon-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .buzon-tabs-header {
+        padding: 6px 6px 0;
+    }
+    .buzon-tab {
+        padding: 10px 6px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+    .buzon-tab-panel {
+        padding: 20px 14px;
+    }
+    .citizen-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .tracker-input-box {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+    .tracker-input-box input {
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+    }
+    .tracker-input-box button {
+        width: 100%;
+    }
+    .tracker-examples-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+    .example-folio-pill {
+        width: 100%;
+        text-align: center;
+        padding: 6px 8px;
+    }
+    .tracker-card {
+        padding: 16px 14px;
     }
     .tracker-stepper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 12px;
+        margin: 18px 0;
+        text-align: left;
+    }
+    .tracker-step-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
+        padding: 0;
+    }
+    .step-node {
+        margin: 0;
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+    .step-label {
+        font-size: 0.8125rem;
     }
     .step-connector {
+        display: none !important;
+    }
+    .success-actions-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dual-btn-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .dual-btn-row .btn {
+        width: 100%;
+    }
+    .btn-whatsapp-action {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+
+    /* Transparencia */
+    .transparencia-table-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Footer */
+    .footer-top-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .bottom-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* Floating Buttons No-Collision System */
+    .floating-whatsapp-btn {
+        bottom: 18px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+    .floating-live-badge {
+        bottom: 78px;
+        right: 16px;
+        padding: 7px 12px;
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+    .back-to-top {
+        bottom: 18px;
+        left: 16px;
+        right: auto;
+        width: 42px;
+        height: 42px;
+    }
+
+    /* Modals Responsive */
+    .modal-dialog {
+        width: 94% !important;
+        max-width: 95vw !important;
+        margin: 20px auto !important;
+        max-height: 88vh;
+        overflow-y: auto;
+        border-radius: var(--radius-md);
+    }
+    .modal-header {
+        padding: 14px 16px;
+    }
+    .modal-title {
+        font-size: 1.2rem;
+    }
+    .modal-body {
+        padding: 16px;
+    }
+    .modal-footer {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .modal-footer .btn {
+        width: 100%;
+    }
+    .live-stream-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .live-stream-actions .btn {
+        width: 100%;
+    }
+    .mediakit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    .mediakit-item .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-name {
+        font-size: 0.95rem;
+    }
+    .brand-subtitle {
         display: none;
+    }
+    .header-actions .btn-gold .btn-text {
+        display: none;
+    }
+    .header-actions .btn-gold {
+        padding: 6px 10px;
+    }
+    .hero-headline {
+        font-size: 1.65rem !important;
     }
 }
 
