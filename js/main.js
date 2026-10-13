@@ -909,7 +909,6 @@ function initLiveStreamModal() {
     const modal = document.getElementById('live-stream-modal');
     const closeBtn = document.getElementById('live-modal-close-btn');
     const triggers = [
-        document.getElementById('btn-open-live-top'),
         document.getElementById('btn-header-live'),
         document.getElementById('btn-mobile-live'),
         document.getElementById('floating-live-btn')
